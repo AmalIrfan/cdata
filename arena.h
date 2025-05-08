@@ -113,6 +113,8 @@ struct arena arena_create(size_t capacity) {
 	return a;
 }
 
+#define _ARENA_UINITIALISED \
+	"error: arena_alloc: uninitialised arena\n"
 #define _ARENA_OVEFLOW \
 	"error: arena_alloc: arena overflow\n" \
 	"         requested: %d\n" \
@@ -124,7 +126,7 @@ void* arena_alloc(struct arena* a,
 	/* check if it is usable */
 	if (!a || !a->data) {
 		fprintf(stderr,
-		        "error: arena_alloc: uninitialised arena\n");
+		        _ARENA_UINITIALISED);
 		exit(1);
 	}
 	/* check capacity */
