@@ -18,7 +18,7 @@
 |      int value                       |
 |  #define HASHMAP_SIZE 16             |
 |  #define HASHMAP_DEFAULT -1          |
-|  #include "hashmap.h"                |
+|  #include "simple_hashmap.h"         |
 |                                      |
 |  int main() {                        |
 |      int i = 0;                      |
@@ -36,7 +36,7 @@
 |  #include <stdio.h>                  |
 |                                      |
 |  #define HASHMAP_IMPLEMENTATION      |
-|  #include "hashmap.h"                |
+|  #include "simple_hashmap.h"         |
 |                                      |
 |  void hello() {                      |
 |      printf("Hello, World!\n");      |
